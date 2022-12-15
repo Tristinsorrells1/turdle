@@ -85,15 +85,15 @@ input:focus {
 }
 
 .correct-location {
-  background-color: #FDDE59;
+  background-color: #83eaac;
 }
 
 .wrong-location {
-  background-color: #5271FF;
+  background-color: #eee45b;
 }
 
 .wrong {
-  background-color: #A6A6A6;
+  background-color: #e86a6a;
 }
 
 /* GUESS BUTTON */
@@ -144,15 +144,15 @@ nav {
 /* LETTERS KEY (left side) */
 
 .correct-location-key {
-  color: #FDDE59;
+  color: #609a43;
 }
 
 .wrong-location-key {
-  color: #5271FF;
+  color: #efd648;
 }
 
 .wrong-key {
-  color: #A6A6A6;
+  color: #ec2121;
 }
 
 #key-section {

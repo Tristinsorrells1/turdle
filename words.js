@@ -1,4 +1,4 @@
-var words = [
+var wordsOLD = [
   "aback",
   "abase",
   "abate",
