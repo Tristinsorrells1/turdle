@@ -148,18 +148,8 @@ function compareGuess() {
 
     if (winningWord.includes(letter)) {
       storeLetters()
-   
-
-      // if (guess.indexOf(letter) === correctWord.indexOf(letter)) {
-      //   updateKeyColor(letter, "correct-location-key");
-      //   updateBoxColor(letter, "correct-location");
-      // }
-      // else {
-			// 	updateKeyColor(letter, "wrong-location-key");
-			// 	updateBoxColor(letter, "wrong-location");
-			// }
     }
-    else if (!winningWord.includes(letter)) {
+    else {
       updateKeyColor(letter, "wrong-key");
       updateBoxColor(letter, "wrong");
     }
@@ -167,37 +157,19 @@ function compareGuess() {
 }
 
 function storeLetters() {
-  let counter1 = 0
-  let counter2 = 0
-
-   let guesses = guess.split("").reduce((accum, l) => {
-			accum[counter1] = l 
-			counter1++;
-			return accum;
-		}, []);
-
-    let answers = winningWord.split('').reduce((accum, l) => {
-      accum[counter2] = l 
-      counter2++
-      return accum 
-  }, [])
-
-  guesses.forEach((letter) => {
-    answers.forEach((answer) => {
-      if (letter === answer) {
-        updateKeyColor(letter, "correct-location-key");
-        updateBoxColor(letter, "correct-location");
-      }
-      else {
-				updateKeyColor(letter, "wrong-location-key");
-				updateBoxColor(letter, "wrong-location");
-			}
-    })
+  guess.split('').forEach((letter) => {
+    let counter = 0
+    if (letter === winningWord[counter]) {
+      updateKeyColor(letter, "correct-location-key");
+      updateBoxColor(letter, "correct-location");
+    }
+    else {
+      updateKeyColor(letter, "wrong-location-key");
+      updateBoxColor(letter, "wrong-location");
+    }
+    counter++
   })
-
 }
-
-
 
 function updateBoxColor(letter, className) {
   var row = [];
